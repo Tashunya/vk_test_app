@@ -1,0 +1,11 @@
+{% extends 'vkapp/base.html' %}
+
+{% block content %}
+ <ul>
+    {% for friend in friends %}
+    <li>
+        {{ friend }}
+    </li>
+    {% endfor %}
+ </ul>
+{% endblock %}
