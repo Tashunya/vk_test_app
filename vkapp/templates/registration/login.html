@@ -1,0 +1,9 @@
+{% extends "vkapp/base.html" %}
+
+{% block title %}Log in{% endblock %}
+
+{% block content %}
+    <button class="btn btn-info">
+        <a href="{% url 'social:begin' 'vk-oauth2'%}">Авторизоваться</a>
+    </button>
+{% endblock %}

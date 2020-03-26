@@ -1,0 +1,39 @@
+img {
+    /*border: 3px solid #b8a9b2;*/
+    border-radius: 100px;
+}
+li {
+    list-style-type: none;
+    padding: 0.3rem;
+   }
+ul {
+    margin-left: 0; /* Отступ слева в браузере IE и Opera */
+    padding-left: 0; /* Отступ слева в браузере Firefox, Safari, Chrome */
+}
+body {
+    background-color: #dfedf0;
+}
+.content {
+  height: 100vh;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/*.container-fluid > div {*/
+/*  width: 85%;*/
+/*  min-width: 300px;*/
+/*  max-width: 500px;*/
+/*}*/
+/*.card {*/
+/*  width: 100%;*/
+/*}*/
+/*.social-container {*/
+/*  display: flex;*/
+/*  flex-direction: column;*/
+/*  justify-content: center;*/
+/*}*/
+.btn a, .btn a:hover {
+    color: white;
+    text-decoration: none;
+}

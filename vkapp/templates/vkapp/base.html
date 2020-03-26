@@ -3,15 +3,15 @@
     <head>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 {#        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.css">#}
-{#        <link rel="stylesheet" type="text/css" href="{% static 'css/blog.css' %}">#}
+        <link rel="stylesheet" type="text/css" href="{% static 'css/vkapp.css' %}">
 {#        <script src="https://kit.fontawesome.com/fbb62296f4.js" crossorigin="anonymous"></script>#}
-        <title>VK Friends</title>
+         <title>{% block title %}{% endblock %}</title>
     </head>
     <body>
         <div class="content container">
             <div class="row">
-                <div id="content-part" class="col-md-8">
-                {% block content %}{% endblock %}
+                <div id="content-part">
+                {% block content %} {% endblock %}
                 </div>
             </div>
         </div>
