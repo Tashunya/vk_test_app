@@ -2,25 +2,22 @@
 {% block title %} VK Friends {% endblock %}
 
 {% block content %}
-    <div>
-        <div class="col-sm-12 mt-2 text-center">
-            <img alt="user-pic" src="{{ user_pic }}"/>
-        </div>
-        <h2> {{ user.first_name }} {{ user.last_name }}</h2>
-
-        <ul>
-        {% for friend in friends %}
-        <li>
-            <img alt="friend-pic" src="{{ friend.photo_50 }}"/>
-            {{ friend.first_name }} {{ friend.last_name }}
-        </li>
-        {% endfor %}
-        </ul>
-        <div class="col-sm-12 mt-2 text-center">
-            <button class="btn btn-vk">
-                <a href="{% url 'logout' %}">Выйти</a>
-            </button>
-        </div>
+    <div class="col-sm-12 mt-2 text-center">
+        <img alt="user-pic" src="{{ user_pic }}"/>
     </div>
+    <h2> {{ user.first_name }} {{ user.last_name }}</h2>
 
+    <ul>
+    {% for friend in friends %}
+    <li>
+        <img alt="friend-pic" src="{{ friend.photo_50 }}"/>
+        {{ friend.first_name }} {{ friend.last_name }}
+    </li>
+    {% endfor %}
+    </ul>
+    <div class="col-sm-12 mt-2 text-center">
+        <button class="btn btn-vk">
+            <a href="{% url 'logout' %}">Выйти</a>
+        </button>
+    </div>
 {% endblock %}

@@ -1,0 +1,12 @@
+{% extends "vkapp/base.html" %}
+
+{% block title %} VK Friends {% endblock %}
+
+{% block content %}
+    <h4> Страница не найдена </h4>
+    <div class="col-sm-12 mt-2 text-center">
+        <button class="btn btn-vk">
+            <a href="{% url 'friend_list'%}"> Назад </a>
+        </button>
+    </div>
+{% endblock %}
