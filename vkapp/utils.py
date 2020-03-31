@@ -1,5 +1,5 @@
 """
-Module for VK API
+Module for VK API to get user data
 """
 import requests
 from string import Template
@@ -23,14 +23,12 @@ def get_url(target, uid):
 
 def get_params(access_token: str, target_params: dict) -> dict:
     """
+    Return parameters for request to vk api
     :param access_token: session token
     :param target_params: parameters for specific request
     :return: dict of params for url
     """
     base_params = {'access_token': access_token, "v": VERSION}
-
-    # for parameter, value in target_params.items():
-    #     params[parameter] = value
     base_params.update(target_params)
     return base_params
 
@@ -63,7 +61,7 @@ def get_friend_list(uid: str, access_token: str, count: int):
 
 def get_user_pic_link(uid: str, access_token: str):
     """
-    Returns url for large user's avatar
+    Return url for large user's avatar
     :param uid: user id in vk social net
     :param access_token: session token
     :return: url
@@ -80,7 +78,3 @@ def get_user_pic_link(uid: str, access_token: str):
     user_pic_link = response.json()["response"][0]["photo_200"]
 
     return user_pic_link
-
-
-if __name__ == "__main__":
-    print(get_url(target="friends", uid="444444"))
